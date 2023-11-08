@@ -18,6 +18,7 @@ for (let i = 0; i < 16; i++) {
     let x = Math.floor((Math.random() * 10) + 1);
     document.getElementById("grid").innerHTML = x;
 }
+console.log();
 
     if (livello == 1) {
 
