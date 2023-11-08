@@ -1,0 +1,92 @@
+:root {
+    --num-cells-per-row: 10;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(112, 221, 184);;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+	display: flex;
+	margin-bottom: 5%;
+	
+}
+
+/*** HEADER ***/
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 70px;
+	
+	background:white;
+	color: black;
+	box-shadow: 0 1px 3px #666;
+    
+}
+
+nav {
+	height: 100%;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    
+}
+
+nav a {
+	color: black;
+	text-decoration: none;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+    align-items: center;
+}
+
+.menu-left li {
+ padding: 5px;
+ 
+}
+.menu-right li {
+	padding: 2%;
+    
+}
+
+main {
+    margin-top: 10%;
+    
+}
+
+#grid {
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: 600px;
+    width: 600px;
+    text-align: center;
+}
+
+.square {
+    border: solid 1px black;
+    padding-top: 3%;
+    color: black;
+    height: calc(100% / var(--num-cells-per-row) );
+    width: calc(100% / var(--num-cells-per-row) );
+}
+
+.highlight {
+    background: cyan;
+}
