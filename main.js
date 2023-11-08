@@ -10,16 +10,18 @@ function creaGriglia() {
     const livello = getLivello();
     let numCelleTotali;
     let numCellePerRiga;
-    
+   const  numeriCasuali =  [16];
     
 
 
 for (let i = 1; i <= 16; i++) {
     let x = Math.floor((Math.random() * 10) + 1);
-    document.getElementById("grid").innerHTML = x;
+     let cella = creaQuadrato(i, bomba);
+        cella.style.width = `calc(100% / ${numCellePerRiga})`;
+        cella.style.height = `calc(100% / ${numCellePerRiga})`;
     console.log(x);
 }
-console.log();
+
 
     if (livello == 1) {
 
@@ -69,12 +71,6 @@ function creaQuadrato(numero, bomba) {
 
 
     cella.addEventListener("click", function () {
-
-        if(numero==cellaFortunata) {
-            console.log("Hai vinto", numero);
-        } else {
-            console.log("Sbagliato, ritenta", numero);
-        }
 
         cella.classList.toggle("highlight");
 
