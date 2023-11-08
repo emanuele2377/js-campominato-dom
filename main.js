@@ -10,13 +10,13 @@ function creaGriglia() {
     const livello = getLivello();
     let numCelleTotali;
     let numCellePerRiga;
-    let random;
-    let numeriCasuali;
+    
     
 
 
 for (let i = 0; i < 16; i++) {
-  numeriCasuali[i] = random.innerHTML(100) + 1; 
+    let x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("grid").innerHTML = x;
 }
 
     if (livello == 1) {
@@ -37,8 +37,8 @@ for (let i = 0; i < 16; i++) {
 
     const bomba = getRndInteger(1, numCelleTotali);
     
+    
     for (let i = 1; i <= numCelleTotali; i++) {
-        
         let cella = creaQuadrato(i, bomba);
         cella.style.width = `calc(100% / ${numCellePerRiga})`;
         cella.style.height = `calc(100% / ${numCellePerRiga})`;
